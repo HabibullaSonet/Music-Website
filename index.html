@@ -19,7 +19,16 @@
                 <li><a href="#">SPECIFICATIONS</a></li>
                 <li><a href="#">PRODUCTS</a></li>
                 <li><a href="#">CONNECT</a></li>
+			</ul>
+			
+			<div class="menu-toggle">
+				<input type="checkbox" />
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
         </div>
+
 
         <div class="content">
             <div class="left-col">
@@ -50,6 +59,14 @@
                 icon.src = "img/play.png";
             }
         }
+		// Hamburger menu animation
+		const menuToggle = document.querySelector('.menu-toggle input');
+		const nav = document.querySelector('.navbar ul');
+
+		menuToggle.addEventListener('click', function(){
+			nav.classList.toggle('slide');
+		});
+		// Hamburger menu end
     </script>
 
 </body>
