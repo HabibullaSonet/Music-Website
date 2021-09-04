@@ -5,53 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <title>Music Website</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="navbar">
-            <img src="img/logo.png" class="logo">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">SPECIFICATIONS</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-                <li><a href="#">CONNECT</a></li>
-        </div>
-
-        <div class="content">
-            <div class="left-col">
-                <h1>THE<br>REAL<br>SOUND</h1>
+        <div class="centeral">
+            <div class="navbar">
+                <img src="img/logo.png" class="logo">
+                <ul>
+                    <li class="active"><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SPECIFICATIONS</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#">CONNECT</a></li>
             </div>
-            <div class="right-col">
-                <p>Click Here To Listen</p>
-                <img src="img/play.png" id="icon">
+
+            <div class="content">
+                <div class="left-col">
+                    <h1 class="main_title">THE<br>REAL<br>SOUND</h1>
+                </div>
+                <div class="right-col">
+                    <p id="status">Click Here To Listen</p>
+                    <img src="img/play.png" id="icon">
+                </div>
             </div>
         </div>
     </div>
+    <div class="loadingPage"><img src="img/loading.gif" alt=""></div>
 
-    <audio id="mySong">{
-        <source src="/img/song.mp3" type="audio/mp3">
-    </audio>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
 
-
-    <script>
-        var mySong = document.getElementById("mySong");
-        var icon = document.getElementById("icon");
-
-        icon.onclick = function(){
-            if(mySong.paused){
-                mySong.play();
-                icon.src = "img/pause.png";
-            }else{
-                mySong.pause();
-                icon.src = "img/play.png";
-            }
-        }
-    </script>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 </body>
+<script src="app.js"></script>
+
+</html>
 
 </html>
